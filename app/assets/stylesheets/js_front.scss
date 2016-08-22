@@ -52,18 +52,13 @@ CSS RESET END
 
 START STYLE
 */
-html {
-  background-color: #555555
-}
-
 ul {
   height: 100%;
   width: 100%;
 }
 
 li {
-  border-style: solid;
-  border-width: 1px;
+  box-shadow: 0px 0px 1px 1px black inset;
   text-decoration: none;
   display: inline-block;
   width: 100vw;

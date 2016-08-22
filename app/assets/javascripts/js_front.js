@@ -27,6 +27,8 @@ function removeLi() {
   lis = document.querySelectorAll('li');
   width = 100/((lis.length-uls.length)/uls.length) + 'vw';
 
+  if(lis.length == 1) return;
+
   for(i = 0 ; i < uls.length ; i++) {
     uls[i].removeChild(uls[i].lastElementChild);
   }
@@ -50,6 +52,7 @@ function addLi() {
     newLi = document.createElement('LI')
     newLi.style.height = height;
     newLi.style.width = width;
+    newLi.style.backgroundColor = randomColor();
     addClickRandomColor(newLi);
     uls[i].appendChild(newLi);
   }
@@ -59,6 +62,8 @@ function removeUl() {
   uls = document.querySelectorAll('ul');
   lis = document.querySelectorAll('li');
   height = 100/(uls.length-1) + 'vh';
+
+  if(uls.length == 1) return;
 
   document.body.removeChild(uls[uls.length-1]);
 
@@ -83,6 +88,7 @@ function addUl() {
     newLi = document.createElement('LI')
     newLi.style.height = height;
     newLi.style.width = width;
+    newLi.style.backgroundColor = randomColor();
     addClickRandomColor(newLi);
     newUl.appendChild(newLi);
   }
