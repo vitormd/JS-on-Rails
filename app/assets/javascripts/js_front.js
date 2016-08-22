@@ -99,7 +99,6 @@ function addUl() {
 function addClickRandomColor(el) {
   el.addEventListener('click', function() {
     this.style.backgroundColor = randomColor();
-    console.log(randomColor());
   });
 }
 
