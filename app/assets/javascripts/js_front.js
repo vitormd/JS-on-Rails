@@ -27,7 +27,7 @@ function removeLi() {
   lis = document.querySelectorAll('li');
   width = 100/((lis.length-uls.length)/uls.length) + 'vw';
 
-  if(lis.length == 1) return;
+  if(lis.length == uls.length) return;
 
   for(i = 0 ; i < uls.length ; i++) {
     uls[i].removeChild(uls[i].lastElementChild);
